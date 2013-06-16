@@ -15,8 +15,8 @@ function Frame() {
 }
 
 function Circle() {
-	this.x = 0;
-	this.y = 0;
+	this.x = 100;
+	this.y = 100;
 	this.radius = 100;
 	this.color = "red";
 
@@ -39,7 +39,6 @@ function Circle() {
 frame = new Frame();
 circle = new Circle();
 frame.render(circle);
-frame.clear();
 
 $("body").keydown(function(event) {
 	switch (event.keyCode) {
