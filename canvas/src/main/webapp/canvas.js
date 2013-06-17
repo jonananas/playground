@@ -66,19 +66,20 @@ circle = new Circle();
 	frame.render(circle);
 })();
 
-$("body").keydown(function(event) {
-	switch (event.keyCode) {
-	case 39:
-		circle.moveRight(10);
+$("body").on('keydown', function(event) {
+	var arrow = {up: 38, down: 40, left: 37, right: 39};
+	switch (event.which) {
+	case arrow.right:
+		circle.moveRight(1);
 		break;
-	case 37:
-		circle.moveRight(-10);
+	case arrow.left:
+		circle.moveRight(-1);
 		break;
-	case 38:
-		circle.moveDown(-10);
+	case arrow.up:
+		circle.moveDown(-1);
 		break;
-	case 40:
-		circle.moveDown(10);
+	case arrow.down:
+		circle.moveDown(1);
 		break;
 	default:
 		console.log("pressed " + event.keyCode);
